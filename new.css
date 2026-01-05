@@ -1,0 +1,269 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #c6dfba;
+}
+
+/* Navbar  */
+.navbar {
+    top: 0px;
+    position: fixed; 
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #020901; 
+    z-index: 1000;
+}
+
+.nav-links a, .user-actions a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #91b685;
+}
+
+.signup-btn {
+    background-color: #628141;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 25px;
+}
+
+.hamepg {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.back-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+.about-are, .about-mission, .about-teach, .contact-page-section {
+    max-width: 900px;
+    margin: 120px auto 30px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.about-mission, .about-teach { margin-top: 30px; }
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #1a3300;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #628141;
+    display: inline-block;
+}
+
+.course-page-wrapper {
+    margin-top: 120px; 
+    padding: 40px 5%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.course-page-wrapper .main-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #628141;
+    display: inline-block;
+    color: #1a3300;
+}
+
+.course-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.single-course-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer;
+}
+.single-course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.single-course-card:hover .video-holder video {
+    filter: brightness(1.1);
+}
+.video-holder video {
+    width: 100%;
+    height: 275px; 
+    object-fit: cover;
+    display: block;
+    background: #000;
+}
+
+.course-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.course-details h3 {
+    font-size: 1.4rem;
+    color: #1a3300;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.course-details p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.course-meta {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #628141;
+}
+
+.professional-special {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    width: 50%; 
+}
+
+.recipe-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 120px 5% 50px;
+}
+
+.recipe-full-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+}
+
+.recipe-full-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block; 
+    transition: transform 0.5s ease;
+}
+
+.recipe-content {
+    padding: 15px 40px 20px; 
+}
+
+.recipe-full-card:hover {
+    transform: scale(1);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.recipe-full-card:hover img {
+    transform: scale(1.1); 
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: 200px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.input-box input, .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-btn:hover {
+    background-color: #4a6331; 
+    color: #ffffff !important;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+}
+
+.btn, .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #628141;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    margin-top: 10px;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #4a6331;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
